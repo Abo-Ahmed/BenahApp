@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:weightSum="1"
-    android:background="@drawable/back">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
 
-    <Button
-        android:layout_width="253dp"
-        android:layout_height="253dp"
-        android:text=""
-        android:id="@+id/btnCamera"
-        android:layout_weight="0.60"
-        android:textSize="@dimen/abc_select_dialog_padding_start_material"
-        android:textStyle="bold|italic"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/present"
+    <ImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:layout_marginLeft="5dp"
+       android:layout_marginTop="5dp"
+       android:id="@+id/universityimg"
+       android:layout_alignParentLeft="true"
+       />
 
-        />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pluserism"
-        android:id="@+id/plubtn"
-        android:layout_below="@+id/btnCamera"
-        android:layout_alignRight="@+id/btnCamera"
-        android:layout_alignEnd="@+id/btnCamera"
-        android:layout_marginTop="39dp" />
+   <android.support.design.widget.TabLayout
+       android:id="@+id/tab_layout"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="#b57a3f"
+       android:elevation="4dp"
+       app:tabGravity="fill"
+       app:tabMode="scrollable"
+       app:tabMaxWidth="0dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New session"
-        android:id="@+id/newbtn"
-        android:layout_alignTop="@+id/plubtn"
-        android:layout_alignLeft="@+id/btnCamera"
-        android:layout_alignStart="@+id/btnCamera" />
+
+   <android.support.v4.view.ViewPager
+       android:id="@+id/pager"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
 
 </RelativeLayout>

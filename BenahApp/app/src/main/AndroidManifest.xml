@@ -3,10 +3,10 @@
     package="com.example.dell.benahapp">
 
 
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.front" android:required="false" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -18,18 +18,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".Major.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>`
         </activity>
 
-    <activity android:name=".pluserActivity">
+
+        <activity android:name=".attend.AttendenceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ATTENDENCE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>`
+        </activity>
+
+    <activity android:name=".attend.pluserActivity">
         <intent-filter>
             <action android:name="android.intent.action.pluserism" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
